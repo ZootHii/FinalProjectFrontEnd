@@ -63,4 +63,7 @@ Angular
   component basit bir class ama üstündeki decleration ile tanımlıyoruz
   ./ aynı klasörde bulunan yer path
   [] array demek gene
+
+angular.json : angular projesiyle ilgili configuration yeridir backend teki startup ve app.json gibi
+node_modules içersiindeki style ile ilgili yerleri anuglar.json style kısmına eklememiz şart
 */
