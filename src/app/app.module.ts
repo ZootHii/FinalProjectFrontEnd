@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductComponent } from './components/product/product.component';
+import { CategoryComponent } from './components/category/category.component';
+import { NavibarComponent } from './components/navibar/navibar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, // otomatik component oluşturunca buraya ekliyor
+    ProductComponent,
+    CategoryComponent,
+    NavibarComponent
   ],
   imports: [
     BrowserModule,
