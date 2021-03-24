@@ -15,8 +15,18 @@ Hello {{user}}
   <li *ngFor="let product of products">{{product.productName}}</li>
 </ul>-->
 
-<app-navibar></app-navibar>
-<app-category></app-category>
-<app-product></app-product>
+<div class="container">
+  <app-navibar></app-navibar>
+  <div class="row">
+    <div class="col-md-3"> <!--div 12 eşit parçaya bölüyor bir row u colum olarak ve biz bu columları 3 e 9 dağıttık-->
+      <app-category></app-category>
+    </div>
+    <div class="col-md-9">
+      <app-product></app-product>
+    </div>
+  </div>
 
-<router-outlet></router-outlet>
+
+
+  <router-outlet></router-outlet>
+</div>

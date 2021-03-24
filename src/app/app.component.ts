@@ -8,12 +8,6 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title: string = 'final-project-frontend'; // java scriptte tip veremeyiz fakat typescriptte verebiliyoruz tip güvenli
   user: string = 'Ahmet Yıldırım';
-  product0: any = {productId: 1, productName: 'Bardak', category: 1, unitPrice: 5}; // {} obje oluşturma notasyon
-  product1: any = {productId: 2, productName: 'Elam', category: 3, unitPrice: 13};
-  product2: any = {productId: 3, productName: 'Armut', category: 5, unitPrice: 23};
-  product3: any = {productId: 4, productName: 'Birşey', category: 4, unitPrice: 43};
-
-  products = [this.product0, this.product1, this.product2, this.product3]; // *ngFor Directive demek : bulunduğun satırı <li> tekrar et
 }
 
 
@@ -21,6 +15,10 @@ export class AppComponent {
 'ng serve --open' diyip çalıştır terminalden ctrl+c yaparsan kod durur
 her değişiklik yapmanda ctrl+s yaparsan sayfa yenilenir aynı flutter
 'ng g component product' product component generate
+'npm install bootstrap' bootstrap kurar
+'npm install bootstrap@5.0.0-beta2' belirli versiyonunu kurar
+creative-tim.com güzel tasarımlar ücretsiz
+
 Angular, React, VueJs
 
 SPA : Single Page Applications tek bir sayfadan oluşur
