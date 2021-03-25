@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Product} from "../../models/product";
+import {ProductResponseModel} from "../../models/productResponseModel";
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-product',
@@ -7,16 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  product0: any = {productId: 1, productName: 'Bardak', category: 1, unitPrice: 5}; // {} obje oluşturma notasyon
-  product1: any = {productId: 2, productName: 'Elam', category: 3, unitPrice: 13};
-  product2: any = {productId: 3, productName: 'Armut', category: 5, unitPrice: 23};
-  product3: any = {productId: 4, productName: 'Birşey', category: 4, unitPrice: 43};
+  //product0: any = {productId: 1, productName: 'Bardak', category: 1, unitPrice: 5}; // {} obje oluşturma notasyon
 
-  products = [this.product0, this.product1, this.product2, this.product3]; // *ngFor Directive demek : bulunduğun satırı <li> tekrar et
+  products: Product[] = []; // *ngFor Directive demek : bulunduğun satırı <li> tekrar et
+  dataLoaded = false;
 
-  constructor() { }
+  /*productResponseModel:ProductResponseModel={
+    data: this.products,
+    message: "",
+    success: true
+  };*/
 
-  ngOnInit(): void {
+
+  constructor(private productService: ProductService/*private httpClient: HttpClient*/) { // httpClient injection only in Angular app.module.ts içinde yapıyoruz // httpclient ı service içine taşıdık oradaki constructor
   }
 
+  ngOnInit(): void { // component ilk açılınca çalışan yer
+    //console.log("init çalıştı");
+    this.getProducts();
+  }
+
+  getProducts() {
+    this.productService.getProducts().subscribe((response) => { // getProducts.subscribe async çalışıyor yani işi bitmeden bitmiyor
+      this.products = response.data
+      this.dataLoaded = true;
+    });
+  }
 }

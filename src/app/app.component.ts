@@ -18,6 +18,8 @@ her değişiklik yapmanda ctrl+s yaparsan sayfa yenilenir aynı flutter
 'npm install bootstrap' bootstrap kurar
 'npm install bootstrap@5.0.0-beta2' belirli versiyonunu kurar
 creative-tim.com güzel tasarımlar ücretsiz
+'CORS' f12 de bunu içeren hata görüyorsak backendte apiye erişim için gerekli işlemler yapılmamış
+'ng g service product' productlar için service oluşturmaya yarıyor
 
 Angular, React, VueJs
 
